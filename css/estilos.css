@@ -89,9 +89,44 @@ nav:hover{
 table, th, td{
     padding: 1rem;
 }
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--letras);
+    color: var(--blanco);
+}
 main.table{
     margin: 1rem auto;
-    width: 80vw;
+    width: 80%;
     height: 95vh;
     background-color: var(--blanco);
+    box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.table_header{
+    width: 100%;
+    height: 10%;
+    background-color: var(--hover);
+    padding: .8rem 1rem;
+}
+.table_body{
+    width: 95%;
+    max-height: 89%;
+    background-color: var(--blanco);
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+.table_body::-webkit-scrollbar{
+    width: .5rem;
+    height: .5rem;
+}
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: var(--letras);
+    visibility: hidden;
+}
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
 }
