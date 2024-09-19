@@ -19,6 +19,10 @@ html{
     --letras: #4e4e4e;
     --hover: #f8f8f8;
 }
+.contenedor{
+    width: 100%;
+    display: grid;
+}
 body{
     background-color: var(--secundario);
 }
@@ -88,21 +92,22 @@ nav:hover{
 /* tabla */
 table, th, td{
     padding: 1rem;
+    border-collapse: collapse;
 }
 thead th{
-    position: sticky;
     top: 0;
     left: 0;
     background-color: var(--letras);
     color: var(--blanco);
 }
 main.table{
-    margin: 1rem auto;
-    width: 80%;
-    height: 95vh;
+    margin: 1rem 0 0 10rem;
+    width: 90%;
+    height: 97vh;
     background-color: var(--blanco);
     box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border-radius: .5rem;
 }
 .table_header{
     width: 100%;
@@ -129,4 +134,8 @@ main.table{
 }
 .table_body:hover::-webkit-scrollbar-thumb{
     visibility: visible;
+}
+tbody tr:nth-child(even){
+    background-color: var(--secundario);
+
 }
